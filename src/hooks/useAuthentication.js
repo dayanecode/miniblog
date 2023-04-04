@@ -61,10 +61,18 @@ export const useAuthentication = () => {
                 } else {
                     systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde.";
                 }
+
                 setLoading(false)
                 setError(systemErrorMessage)
         }
     };
+
+    // logout - sign out
+    const logout = () => {
+        checkIfIsCancelled()
+
+        signOut(auth)
+    }
     
     // Vai fazer com que a gente consiga ter um app mais performático 
     useEffect(() => {
@@ -75,6 +83,7 @@ export const useAuthentication = () => {
         auth,
         createUser,
         error,
-        loading
+        loading,
+        logout
     }
 }
