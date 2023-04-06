@@ -20,7 +20,7 @@ import Register from './pages/Register/Register'
 // components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
-import CreatePost from './pages/Dashboard/CreatePost/CreatePost';
+import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
