@@ -34,9 +34,7 @@ export const useInsertDocument = (docCollection) => {
     }
 
     const insertDocument = async (document) => {
-        checkCancelBeforeDispatch({
-            type: "LOADING",
-        })
+        checkCancelBeforeDispatch({ type: "LOADING" })
 
         try {
 
@@ -45,7 +43,7 @@ export const useInsertDocument = (docCollection) => {
             const insertedDocument = await addDoc(
                 collection(db, docCollection),
                 newDocument
-            )
+            );
 
             checkCancelBeforeDispatch({
                 type: "INSERTED_DOC",
@@ -57,7 +55,9 @@ export const useInsertDocument = (docCollection) => {
             checkCancelBeforeDispatch({
                 type: "ERROR",
                 payload: error.message,
+                
             });
+
         }
     };
     
@@ -66,5 +66,7 @@ export const useInsertDocument = (docCollection) => {
         return () => setCancelled(true)
     }, []);
 
-    return { insertDocument, response }
+
+    return { insertDocument, response };
+    
 }
