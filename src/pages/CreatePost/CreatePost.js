@@ -23,6 +23,12 @@ const CreatePost = () => {
     e.preventDefault();
     setFormError("");
 
+    // checar todos os valores
+    if (!title || !image || !tags || !body) {
+      setFormError("Por favor, preencha todos os campos")
+      return
+    } 
+
     // validate image URL
       try {
         // Aqui a gente tenta criar uma nova URL
@@ -30,14 +36,11 @@ const CreatePost = () => {
       } catch (error) {
         return setFormError("A imagem precisa ser uma URL.");
       }
-    
+
+
     // criar o array de tags
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
 
-    // checar todos os valores
-    if (!title || !image ||!tags || !body){
-      setFormError("Por favor, preencha todos os campos")
-    }
 
     console.log({
       title,
@@ -48,8 +51,6 @@ const CreatePost = () => {
       createdBy: user.displayName,
     });
 
-      // Se tiver erro retornar
-      if (formError) return
     
     insertDocument({
       title,
