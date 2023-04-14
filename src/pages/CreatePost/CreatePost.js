@@ -70,7 +70,7 @@ const CreatePost = () => {
     <div className={styles.create_post}>
       <h2>Criar Post</h2>
       <p>Escreva sobre o que quiser e compartilhe do seu conhecimento</p>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.search_form} onSubmit={handleSubmit}>
         <label>
           <span>Título:</span>
           <input
