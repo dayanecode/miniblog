@@ -75,7 +75,7 @@ const CreatePost = () => {
           <input
             type="text"
             name='title'
-            required
+            // required
             placeholder='Pense num bom título...'
             onChange={(e) => setTitle(e.target.value)}
             value={title}
@@ -86,7 +86,7 @@ const CreatePost = () => {
           <input
             type="text"
             name='image'
-            required
+            // required
             placeholder='Insira uma imagem que representa o seu post...'
             onChange={(e) => setImage(e.target.value)}
             value={image}
@@ -96,7 +96,7 @@ const CreatePost = () => {
           <span>Conteúdo:</span>
           <textarea
             name='body'
-            required
+            // required
             placeholder='Insira o conteúdo do post'
             onChange={(e) => setBody(e.target.value)}
             value={body}
@@ -107,7 +107,7 @@ const CreatePost = () => {
           <input
             type="text"
             name='tags'
-            required
+            // required
             placeholder='Insira as tags separadas por vírgula...'
             onChange={(e) => setTags(e.target.value)}
             value={tags}
