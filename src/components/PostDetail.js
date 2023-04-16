@@ -7,16 +7,17 @@ const PostDetail = ({post}) => {
     <div>
         <img src={post.image} alt={post.title} />
         <h2>{post.title}</h2>
-        <p>{post.createdBy}</p>
+        <p>{post.body}</p>
+        <p>{post.createBy}</p>
         <div>
-            {post.tags.map((tag) => (
+            {post.tagsArray.map((tag) => (
                <p key={tag}>
                    <span>#</span>
                     {tag}
                 </p>   
               ))}     
         </div>
-        <Link to={`/posts/${post.id}`} className='btn btn-outline'></Link>   
+        <Link to={`/posts/${post.id}`} className='btn btn-outline'>Consultar</Link>   
     </div>
   );
 };

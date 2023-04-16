@@ -40,25 +40,14 @@ const CreatePost = () => {
 
     // criar o array de tags
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
-
-
-    console.log({
-      title,
-      image,
-      body,
-      tagsArray,
-      uid: user.uid,
-      createdBy: user.displayName,
-    });
-
-    
+   
     insertDocument({
       title,
       image,
       body,
       tagsArray,
       uid: user.uid,
-      createdBy: user.displayName,
+      createBy: user.displayName,
     });
 
     //  recirect to home page
