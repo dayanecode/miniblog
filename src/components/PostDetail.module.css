@@ -1,6 +1,6 @@
 .post_detail {
+    padding: 0.1em;
     margin-bottom: 2em;
-    text-align: center;
 }
 
 .post_detail img {
@@ -30,11 +30,4 @@
     color: #444;
     font-size: 0.8em;
     margin-bottom: 1.2em;
-}
-
-.body {
-    display: flex;
-    text-align: justify;
-    max-width: 600px;
-    
 }

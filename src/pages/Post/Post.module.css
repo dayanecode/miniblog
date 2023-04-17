@@ -1,6 +1,11 @@
 .post_container {
+    padding: 0.1em;
     text-align: center;
+}
 
+.post_container img {
+    max-width: 600px;
+    max-height: 400px;
 }
 
 .post_container h3 {
@@ -18,5 +23,11 @@
 
 .tags span {
     font-weight: bold;
+}
 
+.body {
+    padding: 5px 5px 5px ;
+    display: block;
+    text-align: justify;
+    justify-content: center;
 }
