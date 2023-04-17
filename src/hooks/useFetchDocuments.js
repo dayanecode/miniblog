@@ -20,23 +20,25 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     const [cancelled, setCancelled] = useState(false)
 
     useEffect(() => {
-
         async function loadData() {
             if(cancelled) return
 
             setLoading(true)
 
             const collectionRef = await collection(db, docCollection)
-
+            // busca
             try {
+                let q;
 
-                let q
-
-                // busca
-
-                // dashboard
-                
-                q = await query (collectionRef, orderBy("createAt", "desc"));
+                if (search) {
+                    q = await query(
+                        collectionRef, 
+                        where("tagsArray","array-contains", search), 
+                        orderBy("createAt","desc")
+                    );
+                } else {
+                    q = await query(collectionRef, orderBy("createAt", "desc"));
+                }
 
                 // Vai servir para mapear os nosso dados
                 await onSnapshot(q, (querySnapshot) => {

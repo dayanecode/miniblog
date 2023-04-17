@@ -16,6 +16,8 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Search from './pages/Search/Search';
+import Post from './pages/Post/Post';
 
 // components
 import Navbar from './components/Navbar';
@@ -23,10 +25,13 @@ import Footer from './components/Footer'
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 
+
+
 function App() {
 
   const [user, setUser] = useState(undefined)
   const { auth } = useAuthentication()
+
 
   const loadingUser = user === undefined
 
@@ -48,6 +53,7 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
+              {/* Rotas Públicas */}
               <Route
                 path='/'
                 element={<Home />}
@@ -56,6 +62,15 @@ function App() {
                 path='/about'
                 element={<About />}
               />
+              <Route
+                path='/search'
+                element={<Search />}
+              />
+              <Route
+                path='/posts/:id'
+                element={<Post />}
+              />
+              {/* Rotas Privadas */}
               <Route
                 path='/login'
                 element={!user ? <Login /> : <Navigate to="/" />}

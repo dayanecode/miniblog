@@ -3,21 +3,28 @@ import styles from './PostDetail.module.css'
 import { Link } from 'react-router-dom'
 
 const PostDetail = ({post}) => {
+
+  // conversão do creatAt para formato de data e de hora
+  const createAt = post.createAt
+  const date = createAt.toDate();
+  const formattedDate = date.toLocaleDateString();
+  const formattedTime = date.toLocaleTimeString();
+
   return (
-    <div>
-        <img src={post.image} alt={post.title} />
+    <div className={styles.post_detail}>
         <h2>{post.title}</h2>
-        <p>{post.body}</p>
-        <p>{post.createBy}</p>
-        <div>
+        <img src={post.image} alt={post.title} />
+        <p className={styles.createby}>Criado em: {formattedDate} {formattedTime} - Por: {post.createBy}</p>
+        <div className={styles.body}>{post.body}</div>
+        <div className={styles.tags}>
             {post.tagsArray.map((tag) => (
-               <p key={tag}>
+              <p key={tag}>
                    <span>#</span>
                     {tag}
                 </p>   
               ))}     
         </div>
-        <Link to={`/posts/${post.id}`} className='btn btn-outline'>Consultar</Link>   
+        <Link to={`/posts/${post.id}`} className='btn btn-outline'>Ler</Link>   
     </div>
   );
 };
