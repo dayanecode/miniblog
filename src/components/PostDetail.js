@@ -12,10 +12,9 @@ const PostDetail = ({post}) => {
 
   return (
     <div className={styles.post_detail}>
-        <h2>{post.title}</h2>
         <img src={post.image} alt={post.title} />
+        <h2>{post.title}</h2>
         <p className={styles.createby}>Criado em: {formattedDate} {formattedTime} - Por: {post.createBy}</p>
-        <div className={styles.body}>{post.body}</div>
         <div className={styles.tags}>
             {post.tagsArray.map((tag) => (
               <p key={tag}>
