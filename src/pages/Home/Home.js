@@ -32,8 +32,8 @@ const Home = () => {
         <input type="text" placeholder="Ou busque por tags..." onChange={(e) => setQuery(e.target.value)} />
         <button className="btn btn-dark">Pesquisar</button>
         </form>
-        <div>
           {loading && <p>Carregando...</p>}
+        <div>
           {posts && posts.map((post) => <PostDetail post={post} /> )}
           {posts && posts.length === 0 && (
             <div className={styles.noposts}>
