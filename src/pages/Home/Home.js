@@ -27,12 +27,12 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
+          {loading && <p>Carregando...</p>}
         <h1>Veja os nossos posts mais recentes</h1>
         <form onSubmit={handleSubmit} className={styles.search_form}>
         <input type="text" placeholder="Ou busque por tags..." onChange={(e) => setQuery(e.target.value)} />
         <button className="btn btn-dark">Pesquisar</button>
         </form>
-          {loading && <p>Carregando...</p>}
         <div>
           {posts && posts.map((post) => <PostDetail post={post} /> )}
           {posts && posts.length === 0 && (
