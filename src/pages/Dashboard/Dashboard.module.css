@@ -39,13 +39,13 @@
 }
 
 .dash_title {
-    padding-bottom: 20px;
+    padding-bottom: 0.1em;
 }
 
 .dash_buttons {
     display: flex;
     margin: 10px;
-    height: 30px;
+    height: auto;
     font-size: 0.7em;
     justify-content: space-between;
     flex-direction: column;
@@ -69,9 +69,9 @@
 
     .dash_buttons {
         flex-direction: row;
-        justify-content:flex-end;       
+        justify-content:flex-end;     
     }
-    
+
     .post_row button,
     .post_row a {
             margin: 2px;

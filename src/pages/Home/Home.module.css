@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 2em;
+    text-align: center;
 }
 
 .search_form {
