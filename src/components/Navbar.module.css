@@ -6,6 +6,9 @@
     align-items: center;
     padding: .5em;
     min-width: 100vw;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .brand {
@@ -44,3 +47,4 @@
     }
 
 }
+
