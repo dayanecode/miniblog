@@ -1,18 +1,12 @@
 .navbar {
     display: flex;
     box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
-    /* justify-content faz o logo ficar à esquerda e os outros itens à direira */
     justify-content: space-between;
     align-items: center;
-    padding: .5em;
-    min-width: 100vw;
-    width: 100%;
-    top: 0;
-    left: 0;
 }
 
 .brand {
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .brand span {
@@ -40,11 +34,83 @@
 }
 
 
-@media only screen and (min-width: 768px) {
 
-    .links_list li a {
-        font-size: 0.9em;
+/* Smartphone */
+@media only screen and (min-width: 320px) {
+
+    .navbar {
+        max-width: 320px;
     }
 
+    .links_list li a {
+        font-size: 0.2em;
+    }
+
+    .brand {
+        font-size: 0.4em;
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .navbar {
+        max-width: 480px;
+    }
+
+    .links_list li a {
+        font-size: 0.6em;
+    }
+
+    .brand {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .navbar {
+        max-width: 640px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .navbar {
+        max-width: 768px;
+    }
+
+    .links_list li a {
+        font-size: 1em;
+    }
+
+    .brand {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        min-width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .navbar {
+        max-width: 1280px;
+    }
+}
+
+
+@media only screen and (min-width: 1563px) {
+    .navbar {
+        max-width: 1563px;
+    }
+
+    .links_list li a {
+        font-size: 1.2em;
+    }
+
+    .brand {
+        font-size: 1.5em;
+    }
 }
 

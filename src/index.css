@@ -1,9 +1,10 @@
 body {
-  height: 100%;
   background-color: #f6fcff;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+
 }
  
 input::placeholder,
@@ -126,4 +127,59 @@ button[disabled] {
 
 .noposts a {
   padding: 10px 25px;
+}
+
+
+/* Smartphone */
+@media only screen and (min-width: 320px) {
+  body {
+    max-width: 320px;
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    max-width: 640px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 768px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  body {
+    max-width: 1280px;
+  }
+}
+
+
+@media only screen and (min-width: 1563px) {
+  body {
+    max-width: 1563px;
+  }
+}
+
+
+@media only screen and (min-width: 3840px) {
+  body {
+    max-width: 3840px;
+  }
 }
