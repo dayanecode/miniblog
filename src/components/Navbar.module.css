@@ -1,11 +1,13 @@
 .navbar {
+    width: 100vw;    
     display: flex;
-    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
     justify-content: space-between;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
 }
 
 .brand {
+    padding-left: 10px;
     font-size: 2em;
 }
 
@@ -38,27 +40,21 @@
 /* Smartphone */
 @media only screen and (min-width: 320px) {
 
-    .navbar {
-        max-width: 320px;
-    }
 
     .links_list li a {
-        font-size: 0.2em;
+        font-size: 0.4em;
     }
 
     .brand {
-        font-size: 0.4em;
+        font-size: 0.6em;
     }
 }
 
 
 @media only screen and (min-width: 480px) {
-    .navbar {
-        max-width: 480px;
-    }
 
     .links_list li a {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     .brand {
@@ -66,17 +62,10 @@
     }
 }
 
-@media only screen and (min-width: 640px) {
-    .navbar {
-        max-width: 640px;
-    }
-}
+@media only screen and (min-width: 640px) {}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-    .navbar {
-        max-width: 768px;
-    }
 
     .links_list li a {
         font-size: 1em;
@@ -87,23 +76,11 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    .navbar {
-        min-width: 1024px;
-    }
-}
+@media only screen and (min-width: 1024px) {}
 
-@media only screen and (min-width: 1280px) {
-    .navbar {
-        max-width: 1280px;
-    }
-}
-
+@media only screen and (min-width: 1280px) {}
 
 @media only screen and (min-width: 1563px) {
-    .navbar {
-        max-width: 1563px;
-    }
 
     .links_list li a {
         font-size: 1.2em;
