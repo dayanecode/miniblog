@@ -1,5 +1,6 @@
-body {
+body, #root {
   background-color: #f6fcff;
+  width: 100vw;
   height: 100%;
   padding: 0;
   margin: 0;
