@@ -1,0 +1,12 @@
+.avatares {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.avatar {
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+
+}

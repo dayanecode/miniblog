@@ -6,4 +6,18 @@
     color: #aaa
 }
 
+.register img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.avatar {
+    color: rgb(248, 68, 98);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(248, 68, 98);
+    flex-direction: column;
+}
 

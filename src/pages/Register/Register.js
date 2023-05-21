@@ -2,6 +2,7 @@ import styles from './Register.module.css'
 
 import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
+import Avatar from '../../components/Avatar'
 
 const Register = () => {
   const [displayName, setDisplayName] = useState("")
@@ -10,29 +11,36 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
 
-   
   const { createUser, error: authError, loading } = useAuthentication();
+
+  const [escolherAvatar, setEscolherAvatar] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-  // Para zerar os erros
+    // Para zerar os erros
     setError("")
 
-    const user ={
+    const user = {
       displayName,
       email,
       password,
     }
-  // Se as senhas forem diferentes:
+    // Se as senhas forem diferentes:
     if (password !== confirmPassword) {
       setError("As senhas precisam ser iguais")
       return;
-    } 
-  
+    }
+
     const res = await createUser(user);
-   
+
     console.log(user)
+  }
+
+
+  const handleClick = () => {
+    setEscolherAvatar(true)
+  
   }
 
   // Fica mapeando se o setError mudou! Se Mudou vai substituir pelo erro da aplicação
@@ -47,25 +55,36 @@ const Register = () => {
     <div className={styles.register}>
       <h1>Cadastre-se para postar</h1>
       <p>Crie seu usuário e compartilhe suas histórias</p>
-      <form onSubmit={handleSubmit}> 
+
+      <form onSubmit={handleSubmit}>
+        <div className='avatar'>
+        
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" 
+            alt="Avatar" 
+            onClick={handleClick}
+          />
+          <p>Selecione um Avatar</p>
+          {escolherAvatar && <Avatar />}
+        </div>       
         <label>
           <span>Nome: </span>
           <input
-           type="text" 
-           name='displayName'
-           required
-           placeholder='Nome do usuário' 
-           onChange={(e) => setDisplayName(e.target.value)}
-           value={displayName}
+            type="text"
+            name='displayName'
+            required
+            placeholder='Nome do usuário'
+            onChange={(e) => setDisplayName(e.target.value)}
+            value={displayName}
           />
         </label>
         <label>
           <span>Email: </span>
           <input
-            type="email" 
+            type="email"
             name='email'
             required
-            placeholder='E-mail do usuário' 
+            placeholder='E-mail do usuário'
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
@@ -73,22 +92,22 @@ const Register = () => {
         <label>
           <span>Senha: </span>
           <input
-            type="password" 
+            type="password"
             name='password'
             required
-            placeholder='Insira sua senha' 
+            placeholder='Insira sua senha'
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
         </label>
-    
+
         <label>
           <span>Confirmação de senha: </span>
           <input
-            type="password" 
+            type="password"
             name='confirmPassword'
             required
-            placeholder='Confirme a sua senha' 
+            placeholder='Confirme a sua senha'
             onChange={(e) => setConfirmPassword(e.target.value)}
             value={confirmPassword}
           />
