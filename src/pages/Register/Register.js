@@ -14,6 +14,46 @@ const Register = () => {
   const { createUser, error: authError, loading } = useAuthentication();
 
   const [escolherAvatar, setEscolherAvatar] = useState(false)
+  const [isAvatarFixed, setIsAvatarFixed] = useState(true)
+  const [selecionarAvatarUrl, setSelecionarAvatarUrl] = useState("")
+  
+  // Fica mapeando se o setError mudou! Se Mudou vai substituir pelo erro da aplicação
+  useEffect(() => {
+    if (authError) {
+      setError(authError)
+    }
+  }, [authError])
+
+  useEffect(() => {
+    const handleMessage = (e) => {
+      const url = e.data;
+
+      let imgAvatar = document.getElementById('imgAvatar');
+      imgAvatar.src = url
+
+      setEscolherAvatar(false)
+    }
+
+    window.addEventListener('message', handleMessage);
+
+    return() =>{
+      window.removeEventListener('message', handleMessage)
+    }
+  }, [])
+
+  const handleClick = (url) => {
+    setSelecionarAvatarUrl(url)
+    setIsAvatarFixed(false)
+    setEscolherAvatar(true)
+  }
+
+  useEffect(() => {
+    if (isAvatarFixed) {    
+      setSelecionarAvatarUrl("https://cdn-icons-png.flaticon.com/512/6596/6596121.png");
+    }
+
+  }, [isAvatarFixed])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,35 +78,20 @@ const Register = () => {
   }
 
 
-  const handleClick = () => {
-    setEscolherAvatar(true)
-  
-  }
-
-  // Fica mapeando se o setError mudou! Se Mudou vai substituir pelo erro da aplicação
-  useEffect(() => {
-    if (authError) {
-      setError(authError)
-    }
-  }, [authError])
-
-
   return (
     <div className={styles.register}>
       <h1>Cadastre-se para postar</h1>
       <p>Crie seu usuário e compartilhe suas histórias</p>
 
-      <form onSubmit={handleSubmit}>
-        <div className='avatar'>
-        
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" 
+      <form className='avatar' onSubmit={handleSubmit}>
+          <img
+            id="imgAvatar" 
+            src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : selecionarAvatarUrl}
             alt="Avatar" 
             onClick={handleClick}
           />
           <p>Selecione um Avatar</p>
-          {escolherAvatar && <Avatar />}
-        </div>       
+          {escolherAvatar &&  <Avatar handleClick={handleClick} />}     
         <label>
           <span>Nome: </span>
           <input

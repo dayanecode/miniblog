@@ -2,11 +2,9 @@ import styles from './Avatar.module.css'
 
 import { useState, useEffect } from 'react'
 
-const Avatar = () => {
+const Avatar = (props) => {
 
     const [posts, setPosts] = useState([]);
-
-    const [avatarUrl, setAvatarUrl] = useState("")
   
     useEffect(() => fetchPosts(), []);
   
@@ -19,10 +17,11 @@ const Avatar = () => {
         })
         .catch((err) => console.log(err));
     }
-  
+      
     const getAvatarUrl = (e) => {
         const url = e.target.src
-        setAvatarUrl(url)
+        window.parent.postMessage(url, '*')
+        props.handleClick(url);   
     }
 
   return (
@@ -37,9 +36,6 @@ const Avatar = () => {
             />
           </div>
         ))}
-        <div>
-          {avatarUrl && <p>URL do Avatar: {avatarUrl}</p>}
-      </div>
     </div>
   )
 }

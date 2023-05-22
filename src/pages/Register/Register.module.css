@@ -4,13 +4,14 @@
 }
 
 .register p {
-    color: #aaa
+    color: #aaa;
 }
 
 .register img{
     height: 3em;
     width: 3em;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .avatar {
