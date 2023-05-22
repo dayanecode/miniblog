@@ -1,12 +1,21 @@
 .avatares {
+    background-color: #f6fcff;
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
+
     
 }
 
 .avatar {
     border-radius: 50%;
-    margin: 5px;
     cursor: pointer;
 
 }

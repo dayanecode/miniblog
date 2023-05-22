@@ -26,8 +26,7 @@ const Avatar = () => {
     }
 
   return (
-    <div>
-      <form className={styles.avatares}>
+    <div className={styles.avatares}>
             {posts.map((post) => (     
           <div className={styles.avatar}>
             <img
@@ -38,8 +37,9 @@ const Avatar = () => {
             />
           </div>
         ))}
-      </form>
-      {avatarUrl && <p>URL do Avatar: {avatarUrl}</p>}
+        <div>
+          {avatarUrl && <p>URL do Avatar: {avatarUrl}</p>}
+      </div>
     </div>
   )
 }
