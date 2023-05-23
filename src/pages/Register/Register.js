@@ -24,6 +24,7 @@ const Register = () => {
     }
   }, [authError])
 
+  // Obtém a URL do componente Avatar(filho)
   useEffect(() => {
     const handleMessage = (e) => {
       const url = e.data;

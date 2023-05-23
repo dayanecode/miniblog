@@ -20,6 +20,7 @@ const Avatar = (props) => {
       
     const getAvatarUrl = (e) => {
         const url = e.target.src
+        // Envia a URL para o componente Register(pai)
         window.parent.postMessage(url, '*')
         props.handleClick(url);   
     }
