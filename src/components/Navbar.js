@@ -5,6 +5,7 @@ import { useAuthentication } from "../hooks/useAuthentication"
 import { useAuthValue } from "../context/AuthContext"
 
 import styles from './Navbar.module.css'
+import AvatarImg from "./AvatarImg"
 
 const Navbar = () => {
   const { user } = useAuthValue();
@@ -52,10 +53,16 @@ const Navbar = () => {
         <NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : "")}>Sobre</NavLink>
       </li>
       {/* Se o usuário estiver logado, vai aparecer o botão Sair */}
-      {user && (
+      {user && (     
+        <> 
         <li>
           <button onClick={logout} >Sair</button>
         </li>
+        <li>
+          <AvatarImg />
+        </li>
+        </>
+        
       )}
     </ul>
   </nav>

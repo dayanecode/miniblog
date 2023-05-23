@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
 import Avatar from '../../components/Avatar'
 
-const Register = () => {
+const Register = (props) => {
   const [displayName, setDisplayName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
