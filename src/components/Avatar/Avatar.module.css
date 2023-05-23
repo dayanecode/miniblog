@@ -1,5 +1,4 @@
-
-.avatares {
+.avatar_collection {
     background-color: #f6fcff;
     height: 95vh;
     position: absolute;
@@ -24,4 +23,4 @@
 
 .avatar:hover {
     background-color: #a3d4ec;
-  }
+}

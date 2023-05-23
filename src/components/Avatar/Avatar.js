@@ -26,17 +26,19 @@ const Avatar = (props) => {
     }
 
   return (
-    <div className={styles.avatares}>
-            {posts.map((post) => (     
-          <div className={styles.avatar}>
-            <img
-              src={`https://avatars.dicebear.com/api/avataaars/${post.id}.svg`} 
-              alt='Avatar do autor'
-              className='author-avatar'
-              onDoubleClick={getAvatarUrl}
-            />
-          </div>
+    <div>
+      <div className={styles.avatar_collection}>
+              {posts.map((post) => (     
+            <div className={styles.avatar}>
+              <img
+                src={`https://avatars.dicebear.com/api/avataaars/${post.id}.svg`} 
+                alt='Avatar do autor'
+                className='author-avatar'
+                onDoubleClick={getAvatarUrl}
+              />
+            </div>    
         ))}
+      </div>
     </div>
   )
 }
