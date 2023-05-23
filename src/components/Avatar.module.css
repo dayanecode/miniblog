@@ -1,7 +1,6 @@
 
 .avatares {
-    /* background-color: #f6fcff; */
-    background-color: rgba(0,0,0,1.1);
+    background-color: #f6fcff;
     height: 95vh;
     position: absolute;
     display: flex;
@@ -13,8 +12,6 @@
     right: 0;
     bottom: 0;
     box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
-    /* overflow-y: scroll */
-
 }
 
 .avatar {
