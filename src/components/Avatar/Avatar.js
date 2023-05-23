@@ -18,7 +18,8 @@ const Avatar = (props) => {
         .catch((err) => console.log(err));
     }
       
-    const getAvatarUrl = (e) => {
+    // Método que captura a URL do Avatar
+    const handleDoubleClick = (e) => {
         const url = e.target.src
         // Envia a URL para o componente Register(pai)
         window.parent.postMessage(url, '*')
@@ -34,7 +35,7 @@ const Avatar = (props) => {
                 src={`https://avatars.dicebear.com/api/avataaars/${post.id}.svg`} 
                 alt='Avatar do autor'
                 className='author-avatar'
-                onDoubleClick={getAvatarUrl}
+                onDoubleClick={handleDoubleClick}
               />
             </div>    
         ))}

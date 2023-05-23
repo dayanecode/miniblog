@@ -15,7 +15,7 @@ const Register = (props) => {
 
   const [escolherAvatar, setEscolherAvatar] = useState(false)
   const [isAvatarFixed, setIsAvatarFixed] = useState(true)
-  const [selecionarAvatarUrl, setSelecionarAvatarUrl] = useState("")
+  const [obterAvatarUrl, setObterAvatarUrl] = useState("")
   
   // Fica mapeando se o setError mudou! Se Mudou vai substituir pelo erro da aplicação
   useEffect(() => {
@@ -43,14 +43,14 @@ const Register = (props) => {
   }, [])
 
   const handleClick = (url) => {
-    setSelecionarAvatarUrl(url)
+    setObterAvatarUrl(url)
     setIsAvatarFixed(false)
     setEscolherAvatar(true)
   }
 
   useEffect(() => {
     if (isAvatarFixed) {    
-      setSelecionarAvatarUrl("https://cdn-icons-png.flaticon.com/512/6596/6596121.png");
+      setObterAvatarUrl("https://cdn-icons-png.flaticon.com/512/6596/6596121.png");
     }
 
   }, [isAvatarFixed])
@@ -87,7 +87,7 @@ const Register = (props) => {
       <form className='avatar' onSubmit={handleSubmit}>
           <img
             id="imgAvatar" 
-            src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : selecionarAvatarUrl}
+            src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : obterAvatarUrl}
             alt="Avatar" 
             onClick={handleClick}
           />
