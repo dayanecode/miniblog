@@ -1,11 +1,12 @@
+import styles from './Navbar.module.css'
+
 import { NavLink } from "react-router-dom" 
 
-import { useAuthentication } from "../hooks/useAuthentication"
+import { useAuthentication } from "../../hooks/useAuthentication"
 
-import { useAuthValue } from "../context/AuthContext"
+import { useAuthValue } from "../../context/AuthContext"
 
-import styles from './Navbar.module.css'
-import AvatarImg from "./AvatarImg"
+import AvatarImg from "../Avatar/AvatarImg"
 
 const Navbar = () => {
   const { user } = useAuthValue();

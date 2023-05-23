@@ -2,7 +2,7 @@ import styles from './Register.module.css'
 
 import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
-import Avatar from '../../components/Avatar'
+import Avatar from '../../components/Avatar/Avatar'
 
 const Register = (props) => {
   const [displayName, setDisplayName] = useState("")
