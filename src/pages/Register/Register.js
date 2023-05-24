@@ -2,7 +2,7 @@ import styles from './Register.module.css'
 
 import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
-import Avatar from '../../components/Avatar/Avatar'
+import AvatarCollection from '../../components/Avatar/AvatarCollection'
 
 const Register = (props) => {
   const [displayName, setDisplayName] = useState("")
@@ -29,8 +29,8 @@ const Register = (props) => {
     const handleMessage = (e) => {
       const url = e.data;
 
-      let imgAvatar = document.getElementById('imgAvatar');
-      imgAvatar.src = url
+      let avatarIcon = document.getElementById('avatarIcon');
+      avatarIcon.src = url
 
       setEscolherAvatar(false)
     }
@@ -84,15 +84,15 @@ const Register = (props) => {
       <h1>Cadastre-se para postar</h1>
       <p>Crie seu usuário e compartilhe suas histórias</p>
 
-      <form className='avatar' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
           <img
-            id="imgAvatar" 
+            id="avatarIcon" 
             src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : obterAvatarUrl}
             alt="Avatar" 
             onClick={handleClick}
           />
           <p>Selecione um Avatar</p>
-          {escolherAvatar &&  <Avatar handleClick={handleClick} />}     
+          {escolherAvatar &&  <AvatarCollection handleClick={handleClick} />}     
         <label>
           <span>Nome: </span>
           <input
