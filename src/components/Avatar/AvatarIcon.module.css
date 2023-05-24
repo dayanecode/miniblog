@@ -1,0 +1,11 @@
+.avatar_icon img {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.avatar_icon img:hover {
+    background-color: #a3d4ec;
+}
