@@ -12,8 +12,8 @@ const AvatarCollection = (props) => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => res.json())
         .then((data) => {
-          data.lenght = 10;
-          setPosts(data); //passa os dados de uma API para o meu setPosts
+          setPosts(data); //passa os dados da API para setPosts
+          console.log(data)
         })
         .catch((err) => console.log(err));
     }
@@ -32,7 +32,7 @@ const AvatarCollection = (props) => {
               {posts.map((post) => (     
             <div className={styles.avatar}>
               <img
-                src={`https://avatars.dicebear.com/api/avataaars/${post.id}.svg`} 
+                src={`https://api.dicebear.com/6.x/micah/svg?seed=${post.id}`} 
                 alt='Avatar do autor'
                 className='author-avatar'
                 onDoubleClick={handleDoubleClick}
