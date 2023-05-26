@@ -1,12 +1,12 @@
 .avatar_collection {
     background-color: #f6fcff;
-    height: 95vh;
+    min-height: 95vh;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    top: 5px;
+    top: 0px;
     left: 5px;
     right: 0;
     bottom: 0;
