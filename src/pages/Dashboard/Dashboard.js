@@ -24,6 +24,7 @@ const Dashboard = () => {
         <h2>Dashboard</h2>
         <p>Gerencie os seus posts</p>
         {/* Quando não tiver pos */}
+
         {posts && posts.length === 0 ? (
           <div className={styles.noposts}>
             <p>Não foram encontrados posts</p>
@@ -37,10 +38,15 @@ const Dashboard = () => {
              <span>Título</span>
              <span>Ações</span>
             </div>
+           
             {/* renderizar linha onde exibe o post com os botões de ação */}
             {posts &&
               posts.map((post) => (
               <div className={styles.post_row} key={post.id}>
+                <img 
+                  src={post.image} 
+                  alt='imagem do post' 
+                />
                <p className={styles.dash_title}>{post.title}</p>
               <div className={styles.dash_buttons} >
                 <Link to={`/posts/${post.id}`} className="btn btn-outline">Ver</Link>
