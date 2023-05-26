@@ -4,14 +4,10 @@ import styles from './ShowUserAvatar.module.css'
 import { useAuthValue } from '../../context/AuthContext'
 import { useFetchUrlAvatars } from "../../hooks/useFetchUrlAvatars"
 
-import ChooseAvatar from '../ChooseAvatar/ChooseAvatar'
-
 const ShowUserAvatar = () => {
 
     const { user } = useAuthValue()
     const uid = user.uid
-
-    const [alterarAvatar, setAlterarAvatar] = useState(false)
 
     const { urlAvatars: avatars, loading } = useFetchUrlAvatars("users_avatars", null, uid)
 

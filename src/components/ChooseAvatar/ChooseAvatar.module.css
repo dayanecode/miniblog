@@ -1,22 +1,58 @@
 .user_avatar {
-    margin-top: 10px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+    
 }
 
 .user_avatar p {
     color: #aaa;
 }
 
-.user_avatar img{
-    height: 4em;
-    width: 4em;
+.user_avatar button {
+
+    margin-top: 10px;
+}
+
+.avatar_icon {
+    position: relative;
+
+}
+
+.avatar_icon img {
+    height: 10em;
+    width: 10em;
     border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.choose_avatar_btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 
-.user_avatar img:hover{
+.avatar_collection img{
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+} 
+
+
+.icon:hover{
     background-color: #a3d4ec;
+    border-radius: 50%;
 }
 

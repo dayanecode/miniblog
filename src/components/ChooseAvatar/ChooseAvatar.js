@@ -81,16 +81,21 @@ const ChooseAvatar = () => {
   return (
     <div className={styles.user_avatar}>
       <form onSubmit={handleSubmit}>
-        <img
-          id="avatarIcon"
-          src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : avatarUrl}
-          alt="Avatar"
-          onClick={handleClick}
-        />
-        <p>Escolher Avatar</p>
-        {escolherAvatar && <AvatarCollection handleClick={handleClick} />}
+        <div><p>Escolha um Avatar</p></div>
+        <div className={styles.avatar_icon}>
+          <img
+            id="avatarIcon"
+            src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : avatarUrl}
+            alt="Avatar"
+          />
+            <input className={styles.choose_avatar_btn} onClick={handleClick}
+              type='button'
+              value={`\u{1F58A}`}
+            /> 
+        </div>
+        {escolherAvatar && <div className={styles.avatar_collection}><AvatarCollection handleClick={handleClick} /></div>}
         {/* Se NÃO estiver em loading vai exibir o botão Cadastrar */}
-        <button className='btn'>  Atualizar</button>
+        <div><button className='btn'>  Atualizar</button></div>
         {error && <p className="error">{error}</p>}
       </form>
     </div>
