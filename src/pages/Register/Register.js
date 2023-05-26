@@ -2,9 +2,8 @@ import styles from './Register.module.css'
 
 import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
-import AvatarCollection from '../../components/Avatar/AvatarCollection'
-
-const Register = (props) => {
+  
+const Register = () => {
   const [displayName, setDisplayName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -12,10 +11,6 @@ const Register = (props) => {
   const [error, setError] = useState("")
 
   const { createUser, error: authError, loading } = useAuthentication();
-
-  const [escolherAvatar, setEscolherAvatar] = useState(false)
-  const [isAvatarFixed, setIsAvatarFixed] = useState(true)
-  const [obterAvatarUrl, setObterAvatarUrl] = useState("")
   
   // Fica mapeando se o setError mudou! Se Mudou vai substituir pelo erro da aplicação
   useEffect(() => {
@@ -24,38 +19,7 @@ const Register = (props) => {
     }
   }, [authError])
 
-  // Obtém a URL do componente Avatar(filho)
-  useEffect(() => {
-    const handleMessage = (e) => {
-      const url = e.data;
-
-      let avatarIcon = document.getElementById('avatarIcon');
-      avatarIcon.src = url
-
-      setEscolherAvatar(false)
-    }
-
-    window.addEventListener('message', handleMessage);
-
-    return() =>{
-      window.removeEventListener('message', handleMessage)
-    }
-  }, [])
-
-  const handleClick = (url) => {
-    setObterAvatarUrl(url)
-    setIsAvatarFixed(false)
-    setEscolherAvatar(true)
-  }
-
-  useEffect(() => {
-    if (isAvatarFixed) {    
-      setObterAvatarUrl("https://cdn-icons-png.flaticon.com/512/6596/6596121.png");
-    }
-
-  }, [isAvatarFixed])
   
-
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -67,6 +31,7 @@ const Register = (props) => {
       email,
       password,
     }
+    
     // Se as senhas forem diferentes:
     if (password !== confirmPassword) {
       setError("As senhas precisam ser iguais")
@@ -85,14 +50,6 @@ const Register = (props) => {
       <p>Crie seu usuário e compartilhe suas histórias</p>
 
       <form onSubmit={handleSubmit}>
-          <img
-            id="avatarIcon" 
-            src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : obterAvatarUrl}
-            alt="Avatar" 
-            onClick={handleClick}
-          />
-          <p>Selecione um Avatar</p>
-          {escolherAvatar &&  <AvatarCollection handleClick={handleClick} />}     
         <label>
           <span>Nome: </span>
           <input

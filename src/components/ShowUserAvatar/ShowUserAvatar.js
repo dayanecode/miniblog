@@ -4,7 +4,7 @@ import styles from './ShowUserAvatar.module.css'
 import { useAuthValue } from '../../context/AuthContext'
 import { useFetchUrlAvatars } from "../../hooks/useFetchUrlAvatars"
 
-import CreateAvatar from '../CreateAvatar/CreateAvatar'
+import ChooseAvatar from '../ChooseAvatar/ChooseAvatar'
 
 const ShowUserAvatar = () => {
 

@@ -1,0 +1,22 @@
+.user_avatar {
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.user_avatar p {
+    color: #aaa;
+}
+
+.user_avatar img{
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.user_avatar img:hover{
+    background-color: #a3d4ec;
+}
+
