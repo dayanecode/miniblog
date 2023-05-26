@@ -18,15 +18,15 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Search from './pages/Search/Search';
 import Post from './pages/Post/Post';
-
-// components
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer'
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 import EditPost from './pages/EditPost/EditPost';
 
-
+// components
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer'
+import CreateAvatar from './components/CreateAvatar/CreateAvatar';
+import ShowUserAvatar from './components/ShowUserAvatar/ShowUserAvatar';
 
 function App() {
 
@@ -71,6 +71,10 @@ function App() {
                 path='/posts/:id'
                 element={<Post />}
               />
+               <Route
+                path='/avatars'
+                element={<CreateAvatar />}
+              />
               {/* Rotas Privadas */}
               <Route
                 path='/login'
@@ -91,6 +95,10 @@ function App() {
               <Route
                 path='/dashboard'
                 element={user ? <Dashboard /> : <Navigate to="/login" />}
+              />
+              <Route
+                path='/show-avatar'
+                element={user ? <ShowUserAvatar /> : <Navigate to="/login" />}
               />
             </Routes >
           </div>
