@@ -1,4 +1,4 @@
-.user_avatar {
+.avatar_user {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,31 +9,29 @@
     
 }
 
-.user_avatar p {
+.avatar_user p {
     color: #aaa;
 }
 
-.user_avatar button {
+.avatar_user button {
 
     margin-top: 40px;
 }
 
-.avatar_icon {
+.avatar_url {
     position: relative;
     padding: 0;
 }
 
-.avatar_icon img {
+.avatar_url img {
     height: 10em;
     width: 10em;
     border-radius: 50%;
-    margin-bottom: 20px;
     background-color: #a3d4ec;
 }
 
-.choose_avatar_btn {
-    font-size: 0.7em;
-    /* text-align: center; */
+.choose_avatar_url_btn {
+    font-size: 0.8em;
     padding-right: 10px;
     padding-left: 10px;
     position: absolute;
@@ -41,9 +39,7 @@
     right: 0;
     cursor: pointer;
     border-radius: 10px;
-    border: 1px solid #2c2c2c;
     background-color: #f6fcff;
-    vertical-align: text-bottom;
 }
 
 
@@ -53,9 +49,4 @@
     border-radius: 50%;
 } 
 
-
-.icon:hover{
-    background-color: #a3d4ec;
-    border-radius: 50%;
-}
 

@@ -62,8 +62,8 @@ const ChooseAvatar = () => {
     // Para zerar os erros
     setError("")
 
-     // Se o avatar selecionado for igual ao ícone de avatar inicial 
-     if (avatarUrl == 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png') {
+    // Se o avatar selecionado for igual ao ícone de avatar inicial 
+    if (avatarUrl == 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png') {
       setError("Você precisa escolher um avatar.")
       return;
     }
@@ -73,25 +73,25 @@ const ChooseAvatar = () => {
       uid: user.uid,
       userName: user.displayName,
     });
-     
+
     //  recirect to home page 
     navigate("/");
   }
 
   return (
-    <div className={styles.user_avatar}>
+    <div className={styles.avatar_user}>
       <form onSubmit={handleSubmit}>
         <div><p>Escolha um Avatar</p></div>
-        <div className={styles.avatar_icon}>
+        <div className={styles.avatar_url}>
           <img
             id="avatarIcon"
             src={isAvatarFixed ? "https://cdn-icons-png.flaticon.com/512/6596/6596121.png" : avatarUrl}
             alt="Avatar"
           />
-            <input className={styles.choose_avatar_btn} onClick={handleClick}
-              type='button'
+          <input className={styles.choose_avatar_url_btn} onClick={handleClick}
+            type='button'
             value={`\u270E Editar`}
-            /> 
+          />
         </div>
         {escolherAvatar && <div className={styles.avatar_collection}><AvatarCollection handleClick={handleClick} /></div>}
         {/* Se NÃO estiver em loading vai exibir o botão Cadastrar */}
