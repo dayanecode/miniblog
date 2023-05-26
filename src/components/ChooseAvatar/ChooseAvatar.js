@@ -90,7 +90,7 @@ const ChooseAvatar = () => {
           />
             <input className={styles.choose_avatar_btn} onClick={handleClick}
               type='button'
-              value={`\u{1F58A}`}
+            value={`\u270E Editar`}
             /> 
         </div>
         {escolherAvatar && <div className={styles.avatar_collection}><AvatarCollection handleClick={handleClick} /></div>}
