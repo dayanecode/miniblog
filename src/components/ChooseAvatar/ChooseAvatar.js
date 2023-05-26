@@ -3,10 +3,10 @@ import styles from './ChooseAvatar.module.css'
 import { useState, useEffect } from 'react'
 
 // import { useAuthentication } from '../../hooks/useAuthentication'
+import { useNavigate } from 'react-router-dom';
 import { useInsertDocument } from '../../hooks/useInsertDocument';
 import { useAuthValue } from "../../context/AuthContext"
 import AvatarCollection from '../Avatar/AvatarCollection'
-import { useNavigate } from 'react-router-dom';
 
 const ChooseAvatar = () => {
 
@@ -94,7 +94,7 @@ const ChooseAvatar = () => {
           />
         </div>
         {escolherAvatar && <div className={styles.avatar_collection}><AvatarCollection handleClick={handleClick} /></div>}
-        {/* Se NÃO estiver em loading vai exibir o botão Cadastrar */}
+       <p>{user.displayName.toUpperCase()}</p>
         <div><button className='btn'>  Atualizar</button></div>
         {error && <p className="error">{error}</p>}
       </form>
