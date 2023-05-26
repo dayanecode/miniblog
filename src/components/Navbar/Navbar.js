@@ -2,11 +2,10 @@ import styles from './Navbar.module.css'
 
 import { NavLink } from "react-router-dom" 
 
-import AvatarIcon from "../Avatar/AvatarIcon"
-
 import { useAuthentication } from "../../hooks/useAuthentication"
 
 import { useAuthValue } from "../../context/AuthContext"
+import ShowUserAvatar from '../ShowUserAvatar/ShowUserAvatar'
 
 
 const Navbar = () => {
@@ -61,7 +60,7 @@ const Navbar = () => {
           <button onClick={logout} >Sair</button>
         </li>
         <li>
-          <AvatarIcon />
+          <ShowUserAvatar />
         </li>
         </>
         
