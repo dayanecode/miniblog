@@ -25,7 +25,7 @@ import EditPost from './pages/EditPost/EditPost';
 // components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
-import CreateAvatar from './components/CreateAvatar/CreateAvatar';
+import ChooseAvatar from './components/ChooseAvatar/ChooseAvatar';
 import ShowUserAvatar from './components/ShowUserAvatar/ShowUserAvatar';
 
 function App() {
@@ -72,8 +72,8 @@ function App() {
                 element={<Post />}
               />
                <Route
-                path='/avatars'
-                element={<CreateAvatar />}
+                path='/choose-avatar'
+                element={<ChooseAvatar />}
               />
               {/* Rotas Privadas */}
               <Route
