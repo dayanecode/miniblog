@@ -10,6 +10,7 @@
 .brand {
     padding-left: 10px;
     font-size: 2em;
+    text-align: center;
 }
 
 .brand span {
@@ -20,6 +21,7 @@
 .links_list {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .links_list li {
