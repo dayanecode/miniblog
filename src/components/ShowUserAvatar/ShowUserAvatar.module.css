@@ -1,0 +1,11 @@
+.user_avatar img{
+    display: flex;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.user_avatar img:hover {
+    background-color: #a3d4ec;
+}
