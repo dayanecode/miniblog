@@ -90,7 +90,7 @@ const ChooseAvatar = () => {
         <p>Escolher Avatar</p>
         {escolherAvatar && <AvatarCollection handleClick={handleClick} />}
         {/* Se NÃO estiver em loading vai exibir o botão Cadastrar */}
-        <button className='btn'>Alterar</button>
+        <button className='btn'>  Atualizar</button>
         {error && <p className="error">{error}</p>}
       </form>
     </div>

@@ -60,7 +60,7 @@ const Navbar = () => {
           <button onClick={logout} >Sair</button>
         </li>
         <li>
-          <ShowUserAvatar />
+          <NavLink to='/choose-avatar'><ShowUserAvatar /></NavLink>
         </li>
         </>
         
