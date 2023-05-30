@@ -1,4 +1,4 @@
-# MINIBLOG
+# MiniBlog
 
 Este projeto consiste em um blog responsivo, desenvolvido com `React` no front-end e `Firebase` no back-end. Utiliza o banco de dados `Cloud Firestore` e está hospedado na plataforma `Vercel`. 
 
