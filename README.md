@@ -4,27 +4,28 @@ Este projeto consiste em um blog responsivo, desenvolvido com `React` no front-e
 
 ## Funcionalidades
 
-### Usuários Não Logados:
--- Cadastro de usuário com validação de e-mail e senha utilizando `Firebase Authentication`
+#### Usuários Não Logados:
+- Cadastro de usuário com validação de e-mail e senha utilizando `Firebase Authentication`
 
 
--- Visualização de Posts 
+- Visualização de Posts 
 
 
-### Usuários Logados
--- Criação de um Novo Post
+#### Usuários Logados
+- Criação de um Novo Post
 
 
--- Edição do seu próprio Post
+- Edição do seu próprio Post
 
 
--- Exclusão do seu próprio Post
+- Exclusão do seu próprio Post
 
 
--- Alteração do Avatar
+- Alteração do Avatar
 
 ** Após logado no Miniblog, o usuário pode escolher o seu próprio avatar através do `DiceBear API`.
 
 ## Deploy
-Visite o MiniBlog na Nuvem, cadastre-se e crie os seus próprios Posts! [Site](https://miniblog-puce.vercel.app/register )
+Visite o MiniBlog, cadastre-se e crie os seus próprios Posts! 
+>>>> [MiniBlog](https://miniblog-puce.vercel.app/register )
 
