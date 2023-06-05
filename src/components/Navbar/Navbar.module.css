@@ -59,7 +59,7 @@
 
     .nav_menu_active {
         position: absolute;
-        height: 50vh;
+        height: 100vh;
         background-color: #f6fcff;
         opacity: 10;
         list-style: none;
@@ -69,15 +69,17 @@
         left: 0;
         transition: all 0.5s ease;
         z-index: 1;
-        box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
+        
     }
 
     .nav_links {
+        display:table;
         text-align: center;
+        font-weight: bolder;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        width: 98vw;
-        display:table;
+        min-width: 100vw;
+        box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
     }
 
     
@@ -111,27 +113,6 @@
         font-size: 2rem;
     }
 
-
-    .nav_links_mobile {
-        display: block;
-        text-align: center;
-        padding: 1.5rem;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 100%;
-        background-color: rgb(248, 68, 98);
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.5rem;
-
-    }
-
-    .nav_links_mobile:hover {  
-        background-color: #fff;
-        color: #dc3545;
-        transition: 250ms;    
-
-    }
     /*Esconde qualquer botão  */
     /* Button {
         display: none;
