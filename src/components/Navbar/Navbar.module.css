@@ -27,7 +27,6 @@
     align-items: center;
     width: 70vw;
     justify-content: end;
-    margin-right: 2rem;
 }
 
 .nav_links {
@@ -50,9 +49,6 @@
 
 
 @media screen and (max-width: 1024px) {
-
-
-
     .navbar_items {
         position: relative;
     }
@@ -63,10 +59,12 @@
 
     .nav_menu_active {
         position: absolute;
-        background-color: rgb(64, 64, 64);
+        height: 50vh;
+        background-color: #f6fcff;
         opacity: 10;
         list-style: none;
         color: pink;
+        padding: 0;
         top: 40px;
         left: 0;
         transition: all 0.5s ease;
@@ -75,10 +73,10 @@
     }
 
     .nav_links {
-        color: #fff;
         text-align: center;
-        padding: 1rem;
-        width: 100vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 98vw;
         display:table;
     }
 
@@ -109,7 +107,7 @@
         cursor: pointer;
     }
 
-    .fa_times {
+    .icon_fechar{
         font-size: 2rem;
     }
 
@@ -121,7 +119,7 @@
         margin: 2rem auto;
         border-radius: 4px;
         width: 100%;
-        background-color: #4ad9e4;
+        background-color: rgb(248, 68, 98);
         text-decoration: none;
         color: #fff;
         font-size: 1.5rem;
@@ -130,14 +128,14 @@
 
     .nav_links_mobile:hover {  
         background-color: #fff;
-        color: #6568F4;
+        color: #dc3545;
         transition: 250ms;    
 
     }
-
-    Button {
+    /*Esconde qualquer botão  */
+    /* Button {
         display: none;
-    }
+    } */
 
 }
 
