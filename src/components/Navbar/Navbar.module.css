@@ -39,10 +39,6 @@
    transition: all 0.2s ease-out;
 }
 
-.nav_links_mobile {
-    display: none;
-}
-
 .menu_icon {
     display: none;
 }
