@@ -57,7 +57,7 @@
         display: none;        
     }
 
-    .nav_menu_active {
+    .nav_menu_mobile {
         position: absolute;
         height: 100vh;
         background-color: #f6fcff;

@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className={styles.menu_icon} onClick={handleClick}>
                 {clicked ? <FiX className={styles.icon_fechar} /> : <FiMenu className={styles.icon_menu} />}
             </div>
-            <ul className={clicked ? styles.nav_menu_active : styles.nav_menu}>
+            <ul className={clicked ? styles.nav_menu_mobile : styles.nav_menu}>
                 {user && (
                     <>
                         {MenuItemsUserAtivo.map((item, index) => {
