@@ -3,8 +3,7 @@
     display: flex ;
     flex-direction: column;
     justify-content:center;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .dashboard h2 {
@@ -24,26 +23,25 @@
     margin-bottom: 1em;
 }
 
-.post_header, .post_row  {
+.post_header {
+    border-bottom: 2px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: space-between; 
     width: 80%;
-    /* flex-direction: column; */
-}
-
-.post_header {
     font-weight: bold;
-    border-bottom: 2px solid #ccc;
 }
 
 .post_row {
     border-bottom: 1px solid #eee;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .post_row p {
-    color: #000;
+    font-size: 0.6rem;
     margin-bottom: 10px;
 }
 
@@ -52,8 +50,8 @@
 }
 
 .dash_buttons {
+    width: auto;
     display: flex;
-    margin: 10px;
     height: auto;
     font-size: 0.7em;
     justify-content: space-between;
@@ -63,14 +61,19 @@
 
 }
 
+.dash_buttons :link {
+    width: 40px;
+}
+
+
 .dash_buttons button {
-    min-width: 160px;
+    min-width: auto;
     cursor: pointer;
     background-color: transparent;
     border-radius: 5px;
     color: #000;
     border: 1px solid #000;
-    padding: 7px 30px;
+    padding: 7px;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 0.9em;
@@ -91,10 +94,29 @@
 }
 
 
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 280px) {
+
+    .post_row {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 540px) {
+
+    .post_row {
+        justify-content: space-between;
+    }
+
+    .post_row p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 728px) {
     .post_header, .post_row {
         flex-direction: row;
-        width: 80%;
     }
 
     .dash_buttons {
@@ -102,14 +124,25 @@
         justify-content:flex-end;   
     }
     
-     .post_row button,
-    .post_row a {
-            margin: 2px;
-            height: max-content;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .post_row p {
+        font-size: 1.2rem;
+    
+    }
+    .dash_buttons :link {
+        width: 100px;
+        margin-left: 10px;
+        padding: 10px;
     }
 
-    
-
+   .dash_buttons button {
+       width: 120px;
+       margin-left: 10px;
+       padding: 10px;
+   }
 }
 
 
