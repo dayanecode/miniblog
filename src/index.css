@@ -1,9 +1,9 @@
 body, #root {
+  margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100%;
   background-color: #f6fcff;
-  padding: 0;
-  margin: 0;
   font-family: "Montserrat", sans-serif;
 
 }
@@ -39,7 +39,7 @@ nav button:hover {
 /* form styles */
 form {
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 ;
 }
 
 label {
