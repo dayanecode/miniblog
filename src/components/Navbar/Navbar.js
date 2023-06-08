@@ -24,6 +24,10 @@ const Navbar = () => {
         setClicked(!clicked)
     }
 
+    const handleLinkClick = () => {
+        setClicked(false);
+    }
+
     return (
         <nav className={styles.navbar_items}>
             <NavLink to="/" className={styles.navbar_logo}> Mini <span>Blog</span></NavLink>
@@ -36,7 +40,7 @@ const Navbar = () => {
                     <>
                         {MenuItemsUserAtivo.map((item, index) => {
                             return (
-                                <li key={index}><NavLink to={item.url} className={styles.nav_links} onClick={handleClick}>{item.title}</NavLink></li>
+                                <li key={index}><NavLink to={item.url} className={styles.nav_links} onClick={handleLinkClick}>{item.title}</NavLink></li>
                             )
                         }
                         )}
@@ -48,7 +52,7 @@ const Navbar = () => {
                     <>
                         {MenuItemsUserInativo.map((itemInativo) => {
                             return (
-                                <li><NavLink to={itemInativo.url} className={styles.nav_links} onClick={handleClick}>{itemInativo.title}</NavLink></li>
+                                <li><NavLink to={itemInativo.url} className={styles.nav_links} onClick={handleLinkClick}>{itemInativo.title}</NavLink></li>
                             )
                         }
                         )}
